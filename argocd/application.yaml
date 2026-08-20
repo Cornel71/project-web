@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/cornel-cornel-web.git
+    repoURL: https://github.com/Cornel71/project-web.git
     targetRevision: main
     path: k8s
 
