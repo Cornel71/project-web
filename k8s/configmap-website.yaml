@@ -86,6 +86,7 @@ data:
       <!-- SKILLS -->
       <section class="section" id="skills">
         <p class="section-eyebrow" data-type-onview data-text="02 &middot; skills">02 &middot; skills</p>
+        <p></p>
         <h2 class="section-title" data-type-onview data-text="apiVersion: skills/v1"></h2>
 
         <div class="skill-groups">
