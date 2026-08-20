@@ -134,6 +134,7 @@ data:
       <!-- PROJECTS -->
       <section class="section" id="projects">
         <p class="section-eyebrow" data-type-onview data-text="03 &middot; projects">03 &middot; projects</p>
+        <p></p>
         <h2 class="section-title" data-type-onview data-text="Recent deployments"></h2>
 
         <div class="project-grid">
@@ -168,6 +169,7 @@ data:
       <!-- CONTACT -->
       <section class="section section-contact" id="contact">
         <p class="section-eyebrow" data-type-onview data-text="04 &middot; contact">04 &middot; contact</p>
+        <p></p>
         <h2 class="section-title" data-type-onview data-text="Let's talk infrastructure."></h2>
         <p class="contact-sub">Open to new roles and collaborations. Reach out on any endpoint below.</p>
 
