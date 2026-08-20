@@ -1,0 +1,867 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: project-web-content
+  namespace: cornel-web
+  labels:
+    app: project-web
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornel-Mihai Badea — DevOps / Platform Engineer</title>
+    <meta name="description" content="Cornel-Mihai Badea, DevOps / Platform Engineer — Kubernetes, GitOps, CI/CD, Cloud Infrastructure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <canvas id="starfield" class="starfield" aria-hidden="true"></canvas>
+    <div class="nebula" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="nav-inner">
+        <span class="nav-mark">CMB<span class="nav-mark-dot">.</span></span>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about">about</a>
+          <a href="#skills">skills</a>
+          <a href="#projects">projects</a>
+          <a href="#contact">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="eyebrow" data-type data-text="// devops &middot; platform engineering &middot; mission control">// devops &middot; platform engineering &middot; mission control</p>
+            <h1><span data-type data-text="Cornel-Mihai">Cornel-Mihai</span><br><span data-type data-text="Badea">Badea</span></h1>
+            <p class="hero-sub" data-type data-text="I design, ship and run infrastructure that other engineers don't have to think about. Kubernetes, GitOps and reliable delivery pipelines, end to end.">I design, ship and run infrastructure that other engineers don't have to think about. Kubernetes, GitOps and reliable delivery pipelines, end to end.</p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">See the work</a>
+              <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            </div>
+          </div>
+
+          <div class="hero-panel" role="img" aria-label="Terminal output describing Cornel-Mihai Badea as a running engineer resource, launch-countdown style">
+            <div class="panel-titlebar">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+              <span class="panel-title">mission-log — kubectl</span>
+            </div>
+            <div class="panel-body" id="terminalBody">
+              <!-- lines are typed in sequentially by script.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <p class="section-eyebrow" data-type-onview data-text="01 &middot; about">01 &middot; about</p>
+        <div class="about-grid">
+          <h2 class="section-title" data-type-onview data-text="I keep clusters calm and deploys boring.">I keep clusters calm and deploys boring.</h2>
+          <div class="about-body">
+            <p>
+              I'm a DevOps / Platform Engineer focused on building infrastructure that teams can trust:
+              Kubernetes platforms that don't page anyone at 3am, GitOps pipelines that make "what's deployed"
+              a question with one obvious answer, and automation that removes toil instead of relocating it.
+            </p>
+            <p>
+              My day to day lives across container orchestration, Infrastructure as Code, CI/CD design and
+              observability — with a habit of writing things down so the next engineer (often future me) doesn't
+              have to guess.
+            </p>
+            <p class="about-note">This site's content is placeholder — replace it with your real bio.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills">
+        <p class="section-eyebrow" data-type-onview data-text="02 &middot; skills">02 &middot; skills</p>
+        <h2 class="section-title" data-type-onview data-text="apiVersion: skills/v1">apiVersion: skills/v1</h2>
+
+        <div class="skill-groups">
+
+          <div class="skill-group">
+            <p class="skill-group-label">kind: Orchestration</p>
+            <ul class="skill-list">
+              <li><span class="pod-dot"></span>Kubernetes</li>
+              <li><span class="pod-dot"></span>Helm</li>
+              <li><span class="pod-dot"></span>Docker</li>
+              <li><span class="pod-dot"></span>containerd</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-label">kind: GitOps &amp; Delivery</p>
+            <ul class="skill-list">
+              <li><span class="pod-dot"></span>ArgoCD</li>
+              <li><span class="pod-dot"></span>GitHub Actions</li>
+              <li><span class="pod-dot"></span>GitLab CI</li>
+              <li><span class="pod-dot"></span>Kustomize</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-label">kind: Infrastructure</p>
+            <ul class="skill-list">
+              <li><span class="pod-dot"></span>Terraform</li>
+              <li><span class="pod-dot"></span>Ansible</li>
+              <li><span class="pod-dot"></span>AWS</li>
+              <li><span class="pod-dot"></span>cert-manager</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-label">kind: Observability</p>
+            <ul class="skill-list">
+              <li><span class="pod-dot"></span>Prometheus</li>
+              <li><span class="pod-dot"></span>Grafana</li>
+              <li><span class="pod-dot"></span>Loki</li>
+              <li><span class="pod-dot"></span>OpenTelemetry</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <p class="section-eyebrow" data-type-onview data-text="03 &middot; projects">03 &middot; projects</p>
+        <h2 class="section-title" data-type-onview data-text="Recent deployments">Recent deployments</h2>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <p class="project-kind">kind: Project</p>
+            <h3>Placeholder Project One</h3>
+            <p class="project-desc">One line describing what this project does and the problem it solves.</p>
+            <div class="project-tags"><span>Kubernetes</span><span>ArgoCD</span><span>Terraform</span></div>
+            <a href="#" class="project-link">view repository &rarr;</a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-kind">kind: Project</p>
+            <h3>Placeholder Project Two</h3>
+            <p class="project-desc">One line describing what this project does and the problem it solves.</p>
+            <div class="project-tags"><span>CI/CD</span><span>Docker</span><span>AWS</span></div>
+            <a href="#" class="project-link">view repository &rarr;</a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-kind">kind: Project</p>
+            <h3>Placeholder Project Three</h3>
+            <p class="project-desc">One line describing what this project does and the problem it solves.</p>
+            <div class="project-tags"><span>Prometheus</span><span>Grafana</span><span>Helm</span></div>
+            <a href="#" class="project-link">view repository &rarr;</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section-contact" id="contact">
+        <p class="section-eyebrow" data-type-onview data-text="04 &middot; contact">04 &middot; contact</p>
+        <h2 class="section-title" data-type-onview data-text="Let's talk infrastructure.">Let's talk infrastructure.</h2>
+        <p class="contact-sub">Open to new roles and collaborations. Reach out on any endpoint below.</p>
+
+        <div class="endpoints">
+          <a href="mailto:cornel.badea@example.com" class="endpoint">
+            <span class="endpoint-label">/email</span>
+            <span class="endpoint-value">cornel.badea@example.com</span>
+          </a>
+          <a href="https://github.com/your-github" class="endpoint" target="_blank" rel="noopener">
+            <span class="endpoint-label">/github</span>
+            <span class="endpoint-value">github.com/your-github</span>
+          </a>
+          <a href="https://linkedin.com/in/your-linkedin" class="endpoint" target="_blank" rel="noopener">
+            <span class="endpoint-label">/linkedin</span>
+            <span class="endpoint-value">linkedin.com/in/your-linkedin</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Cornel-Mihai Badea.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
+
+  style.css: |
+    :root{
+      --bg: #05070D;
+      --surface: rgba(22, 27, 40, 0.55);
+      --surface-2: rgba(30, 36, 54, 0.65);
+      --border: rgba(148, 163, 200, 0.16);
+      --text: #E9EDF7;
+      --text-muted: #9099B5;
+      --accent: #6EE7FF;
+      --accent-soft: rgba(110, 231, 255, 0.12);
+      --indigo: #A78BFA;
+      --running: #6EE7FF;
+
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    *{ box-sizing: border-box; margin: 0; padding: 0; }
+
+    html{ scroll-behavior: smooth; }
+
+    body{
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    ul{ list-style: none; }
+
+    ::selection{ background: var(--accent); color: #0F1419; }
+
+    :focus-visible{
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* ---------- background: deep space ---------- */
+    .starfield{
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: var(--bg);
+    }
+
+    .nebula{
+      position: fixed;
+      inset: -10%;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 45% at 18% 12%, rgba(167,139,250,0.16), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 85% 30%, rgba(110,231,255,0.10), transparent 60%),
+        radial-gradient(ellipse 55% 50% at 60% 90%, rgba(124,58,237,0.10), transparent 60%);
+      filter: blur(10px);
+      animation: drift 60s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift{
+      0%{ transform: translate3d(0,0,0) scale(1); }
+      100%{ transform: translate3d(2%, -2%, 0) scale(1.05); }
+    }
+
+    /* ---------- layout helpers ---------- */
+    main, header, footer{ position: relative; z-index: 1; }
+
+    .section{
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 120px 32px;
+    }
+
+    .section-eyebrow{
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+
+    .section-title{
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      letter-spacing: -0.01em;
+      margin-bottom: 40px;
+    }
+
+    /* ---------- nav ---------- */
+    .nav{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(5, 7, 13, 0.7);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner{
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-mark{
+      font-family: var(--font-mono);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .nav-mark-dot{ color: var(--accent); }
+
+    .nav-links{ display: flex; gap: 28px; }
+    .nav-links a{
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover{ color: var(--accent); }
+
+    /* ---------- hero ---------- */
+    .hero{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 32px 60px;
+    }
+
+    .hero-inner{
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow{
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1{
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .hero-sub{
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 46ch;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions{ display: flex; gap: 16px; }
+
+    .btn{
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      padding: 13px 24px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      display: inline-block;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); }
+
+    .btn-primary{
+      background: var(--accent);
+      color: #0B1310;
+      font-weight: 600;
+    }
+    .btn-primary:hover{ background: #63dbd0; }
+
+    .btn-ghost{
+      border-color: var(--border);
+      color: var(--text);
+    }
+    .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
+
+    /* ---------- hero terminal panel ---------- */
+    .hero-panel{
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(110,231,255,0.06);
+    }
+
+    .panel-titlebar{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot{ width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .dot-r{ background: #FF5F56; }
+    .dot-y{ background: #FFBD2E; }
+    .dot-g{ background: #27C93F; }
+
+    .panel-title{
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-left: 8px;
+    }
+
+    .panel-body{
+      padding: 22px 20px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    .line{ margin-bottom: 6px; min-height: 1.4em; }
+    .line-head{ color: #6a7590; }
+    .prompt{ color: var(--accent); }
+    .status-running{ color: var(--running); font-weight: 700; }
+
+    .cursor{
+      color: var(--accent);
+      animation: blink 1s steps(1) infinite;
+    }
+    @keyframes blink{ 50%{ opacity: 0; } }
+
+    /* ---------- typewriter ---------- */
+    [data-type], [data-type-onview]{
+      display: inline-block;
+    }
+    h1 [data-type]{ display: inline-block; }
+
+    .typing-cursor{
+      display: inline-block;
+      width: 0.5em;
+      margin-left: 2px;
+      color: var(--accent);
+      animation: blink 0.9s steps(1) infinite;
+    }
+
+    /* ---------- about ---------- */
+    .about-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-body p{
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      max-width: 52ch;
+    }
+
+    .about-note{
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--indigo);
+      border-left: 2px solid var(--indigo);
+      padding-left: 12px;
+      margin-top: 24px;
+    }
+
+    /* ---------- skills ---------- */
+    .skill-groups{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-group{
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    .skill-group-label{
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--indigo);
+      margin-bottom: 16px;
+    }
+
+    .skill-list li{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 0;
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+    }
+    .skill-list li:first-child{ border-top: none; }
+
+    .pod-dot{
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ---------- projects ---------- */
+    .project-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card{
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 26px;
+      transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .project-card:hover{
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(110,231,255,0.08);
+    }
+
+    .project-kind{
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .project-card h3{
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .project-desc{
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    .project-tags{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .project-tags span{
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 9px;
+      border-radius: 4px;
+    }
+
+    .project-link{
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    /* ---------- contact ---------- */
+    .contact-sub{
+      color: var(--text-muted);
+      max-width: 50ch;
+      margin-bottom: 40px;
+      margin-top: -24px;
+    }
+
+    .endpoints{ display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+
+    .endpoint{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      transition: background 0.15s ease;
+    }
+    .endpoint:hover{ background: var(--surface-2); }
+
+    .endpoint-label{
+      font-family: var(--font-mono);
+      color: var(--indigo);
+      font-size: 0.85rem;
+    }
+
+    .endpoint-value{
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    /* ---------- footer ---------- */
+    .footer{
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      text-align: center;
+    }
+    .footer p{
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 860px){
+      .hero-inner{ grid-template-columns: 1fr; }
+      .about-grid{ grid-template-columns: 1fr; }
+      .nav-links{ gap: 16px; }
+    }
+
+    @media (max-width: 520px){
+      .section{ padding: 80px 20px; }
+      .hero{ padding: 70px 20px 40px; }
+      .nav-inner{ padding: 16px 20px; }
+      .endpoint{ flex-direction: column; align-items: flex-start; gap: 6px; }
+    }
+
+    /* ---------- reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      .cursor, .typing-cursor{ animation: none; }
+      .nebula{ animation: none; }
+      .btn:hover, .project-card:hover{ transform: none; }
+    }
+
+  script.js: |
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ============================================================
+       STARFIELD BACKGROUND
+       ============================================================ */
+    (function starfield(){
+      const canvas = document.getElementById('starfield');
+      if(!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w, h, stars, shootingStars = [];
+
+      function sizeCanvas(){
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+
+      function makeStars(){
+        const count = Math.floor((w * h) / 9000);
+        stars = Array.from({ length: count }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 1.3 + 0.3,
+          baseAlpha: Math.random() * 0.6 + 0.3,
+          twinkleSpeed: Math.random() * 0.015 + 0.004,
+          phase: Math.random() * Math.PI * 2,
+        }));
+      }
+
+      function maybeSpawnShootingStar(){
+        if(reduceMotion) return;
+        if(Math.random() < 0.0025 && shootingStars.length < 2){
+          const startX = Math.random() * w * 0.6;
+          const startY = Math.random() * h * 0.4;
+          shootingStars.push({
+            x: startX, y: startY,
+            vx: 6 + Math.random() * 4,
+            vy: 3 + Math.random() * 2,
+            life: 0,
+            maxLife: 40 + Math.random() * 20,
+          });
+        }
+      }
+
+      function draw(){
+        ctx.clearRect(0, 0, w, h);
+
+        // static/twinkling stars
+        for(const s of stars){
+          let alpha = s.baseAlpha;
+          if(!reduceMotion){
+            s.phase += s.twinkleSpeed;
+            alpha = s.baseAlpha * (0.6 + 0.4 * Math.sin(s.phase));
+          }
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(233, 237, 247, ${alpha.toFixed(2)})`;
+          ctx.fill();
+        }
+
+        // shooting stars
+        maybeSpawnShootingStar();
+        shootingStars = shootingStars.filter(sh => sh.life < sh.maxLife);
+        for(const sh of shootingStars){
+          sh.x += sh.vx;
+          sh.y += sh.vy;
+          sh.life++;
+          const alpha = 1 - sh.life / sh.maxLife;
+          const grad = ctx.createLinearGradient(sh.x, sh.y, sh.x - sh.vx * 8, sh.y - sh.vy * 8);
+          grad.addColorStop(0, `rgba(110,231,255,${alpha})`);
+          grad.addColorStop(1, 'rgba(110,231,255,0)');
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = 1.6;
+          ctx.beginPath();
+          ctx.moveTo(sh.x, sh.y);
+          ctx.lineTo(sh.x - sh.vx * 8, sh.y - sh.vy * 8);
+          ctx.stroke();
+        }
+
+        if(!reduceMotion){
+          requestAnimationFrame(draw);
+        }
+      }
+
+      sizeCanvas();
+      makeStars();
+      draw();
+
+      if(reduceMotion){
+        // draw once more after a tick in case fonts shift layout
+        setTimeout(draw, 300);
+      }
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          sizeCanvas();
+          makeStars();
+          if(reduceMotion) draw();
+        }, 150);
+      });
+    })();
+
+    /* ============================================================
+       TYPEWRITER ENGINE
+       ============================================================ */
+    function typeInto(el, text, speed = 28){
+      return new Promise(resolve => {
+        if(reduceMotion){
+          el.textContent = text;
+          resolve();
+          return;
+        }
+        el.textContent = '';
+        el.classList.add('is-typing');
+        const cursor = document.createElement('span');
+        cursor.className = 'typing-cursor';
+        cursor.textContent = '\u2588';
+        el.after(cursor);
+
+        let i = 0;
+        function step(){
+          if(i <= text.length){
+            el.textContent = text.slice(0, i);
+            i++;
+            setTimeout(step, speed + Math.random() * 22);
+          } else {
+            cursor.remove();
+            el.classList.remove('is-typing');
+            resolve();
+          }
+        }
+        step();
+      });
+    }
+
+    /* ---- hero sequence: eyebrow -> name -> subtitle -> terminal log ---- */
+    async function runHeroSequence(){
+      const eyebrow = document.querySelector('.eyebrow[data-type]');
+      const nameParts = document.querySelectorAll('h1 [data-type]');
+      const sub = document.querySelector('.hero-sub[data-type]');
+
+      if(eyebrow) await typeInto(eyebrow, eyebrow.dataset.text.replace(/&middot;/g, '\u00b7'), 22);
+      for(const part of nameParts){
+        await typeInto(part, part.dataset.text, 55);
+      }
+      if(sub) await typeInto(sub, sub.dataset.text, 14);
+
+      runTerminalLog();
+    }
+
+    /* ---- terminal / mission log: lines appear + type sequentially ---- */
+    async function runTerminalLog(){
+      const body = document.getElementById('terminalBody');
+      if(!body) return;
+
+      const lines = [
+        { text: '$ kubectl get engineer cornel-mihai-badea -o wide', cls: '', speed: 16 },
+        { text: 'NAME                     ROLE               STATUS     READY', cls: 'line-head', speed: 4, instant: true },
+        { text: 'cornel-mihai-badea      devops-platform    Running    1/1', cls: '', speed: 4, instant: true, statusWord: 'Running' },
+        { text: '', cls: '', speed: 0, instant: true },
+        { text: '$ kubectl describe engineer cornel-mihai-badea | grep Focus', cls: '', speed: 16 },
+        { text: 'Focus:  Kubernetes, ArgoCD, Terraform, CI/CD, Observability', cls: '', speed: 10 },
+      ];
+
+      for(const l of lines){
+        const p = document.createElement('p');
+        p.className = 'line' + (l.cls ? ' ' + l.cls : '');
+        body.appendChild(p);
+
+        if(!l.text){
+          p.innerHTML = '&nbsp;';
+          continue;
+        }
+
+        if(reduceMotion || l.instant){
+          if(l.statusWord){
+            p.innerHTML = l.text.replace(l.statusWord, `<span class="status-running">${l.statusWord}</span>`);
+          } else {
+            p.textContent = l.text;
+          }
+          if(!reduceMotion) await new Promise(r => setTimeout(r, 120));
+          continue;
+        }
+
+        await typeInto(p, l.text, l.speed);
+      }
+
+      const cursorLine = document.createElement('p');
+      cursorLine.className = 'line';
+      const cursor = document.createElement('span');
+      cursor.className = 'cursor';
+      cursor.textContent = '\u2588';
+      cursorLine.appendChild(cursor);
+      body.appendChild(cursorLine);
+    }
+
+    /* ---- section headings: type once when scrolled into view ---- */
+    function setupScrollTypewriters(){
+      const targets = document.querySelectorAll('[data-type-onview]');
+      if(!targets.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        for(const entry of entries){
+          if(entry.isIntersecting){
+            const el = entry.target;
+            const text = el.dataset.text.replace(/&middot;/g, '\u00b7').replace(/&#39;/g, "'");
+            typeInto(el, text, 20);
+            observer.unobserve(el);
+          }
+        }
+      }, { threshold: 0.4 });
+
+      targets.forEach(t => observer.observe(t));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      runHeroSequence();
+      setupScrollTypewriters();
+    });
+

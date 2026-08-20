@@ -1,0 +1,33 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: project-web-http
+  namespace: cornel-web
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`cornelmihaibadea.alienware.loc`) || Host(`www.cornelmihaibadea.alienware.loc`)
+      kind: Rule
+      services:
+        - name: project-web
+          port: 80
+      middlewares:
+        - name: redirect-https
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: project-web-https
+  namespace: cornel-web
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`cornelmihaibadea.alienware.loc`) || Host(`www.cornelmihaibadea.alienware.loc`)
+      kind: Rule
+      services:
+        - name: project-web
+          port: 80
+  tls:
+    secretName: cornel-web-tls

@@ -1,0 +1,24 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cornel-web-tls
+  namespace: cornel-web
+spec:
+  # Secret that will hold the generated key pair; referenced by the Ingress below
+  secretName: cornel-web-tls
+  duration: 2160h   # 90 days
+  renewBefore: 360h # renew 15 days before expiry
+  subject:
+    organizations:
+      - Cornel-Mihai Badea
+  commonName: cornelmihaibadea.alienware.loc
+  dnsNames:
+    - cornelmihaibadea.alienware.loc
+    - www.cornelmihaibadea.alienware.loc
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: selfsigned-issuer
+    kind: ClusterIssuer
+    group: cert-manager.io
