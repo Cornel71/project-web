@@ -86,7 +86,7 @@ data:
       <!-- SKILLS -->
       <section class="section" id="skills">
         <p class="section-eyebrow" data-type-onview data-text="02 &middot; skills">02 &middot; skills</p>
-        <h2 class="section-title" data-type-onview data-text="apiVersion: skills/v1">apiVersion: skills/v1</h2>
+        <h2 class="section-title" data-type-onview data-text="apiVersion: skills/v1"></h2>
 
         <div class="skill-groups">
 
@@ -133,7 +133,7 @@ data:
       <!-- PROJECTS -->
       <section class="section" id="projects">
         <p class="section-eyebrow" data-type-onview data-text="03 &middot; projects">03 &middot; projects</p>
-        <h2 class="section-title" data-type-onview data-text="Recent deployments">Recent deployments</h2>
+        <h2 class="section-title" data-type-onview data-text="Recent deployments"></h2>
 
         <div class="project-grid">
 
@@ -167,7 +167,7 @@ data:
       <!-- CONTACT -->
       <section class="section section-contact" id="contact">
         <p class="section-eyebrow" data-type-onview data-text="04 &middot; contact">04 &middot; contact</p>
-        <h2 class="section-title" data-type-onview data-text="Let's talk infrastructure.">Let's talk infrastructure.</h2>
+        <h2 class="section-title" data-type-onview data-text="Let's talk infrastructure."></h2>
         <p class="contact-sub">Open to new roles and collaborations. Reach out on any endpoint below.</p>
 
         <div class="endpoints">
